@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Displays 'To infinity and beyond' indefinitely.
+# This script is displaying "To infinity and beyond" indefinitely.
 
 while True
 do
