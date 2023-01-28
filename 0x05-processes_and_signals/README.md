@@ -1,1 +1,1 @@
-processes and signals in linux
+processes and signals in linux operating system
