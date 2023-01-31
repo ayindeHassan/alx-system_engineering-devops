@@ -2,6 +2,6 @@
 # This script displays the content of the file /etc/passwd.
 
 file="/etc/passwd"
-while read line; do
+while read -r line; do
 	echo "$line" | cut -d ':' -f1,3,6
 done <$file
