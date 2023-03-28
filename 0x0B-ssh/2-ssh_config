@@ -17,6 +17,10 @@
 # ssh_config(5) man page.
 
 Host *
+<<<<<<<<< Temporary merge branch 1
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/school
+=========
 #   ForwardAgent no
 #   ForwardX11 no
 #   ForwardX11Trusted yes
@@ -53,3 +57,5 @@ Host *
     GSSAPIAuthentication yes
     GSSAPIDelegateCredentials no
     IdentityFile ~/.ssh/school
+    PasswordAuthentication no
+>>>>>>>>> Temporary merge branch 2
