@@ -3,7 +3,7 @@
     Python script that, for a given employee ID, returns
     information about his/her TODO list progress.
 """
-
+import json
 import requests
 import sys
 
@@ -15,7 +15,10 @@ if __name__ == "__main__":
     user = requests.get(usr_url).json()
     todo = requests.get(tds_url).json()
 
-    completed_nb = 0
+    print(json.dumps(todo, indent = 4))
+    print(type(user))
+
+    """completed_nb = 0
     total_nb = 0
     completed_tasks = []
 
@@ -26,6 +29,4 @@ if __name__ == "__main__":
             completed_tasks.append(task.get("title"))
 
     sentence = "Employee {} is done with tasks({}/{}):"
-    print(sentence.format(user.get("name"), completed_nb, total_nb))
-    for task in completed_tasks:
-        print("\t {}".format(task))
+    print(sentence.format(user.get("name"), completed_nb, total_nb))"""
