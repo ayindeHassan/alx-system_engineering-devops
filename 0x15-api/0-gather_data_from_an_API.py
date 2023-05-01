@@ -15,17 +15,17 @@ if __name__ == "__main__":
     user = requests.get(usr_url).json()
     todo = requests.get(tds_url).json()
 
-    completed_nb = 0
-    total_nb = 0
+    number_of_task_done = 0
+    total_nuber_task_done = 0
     completed_tasks = []
 
     for task in todo:
-        total_nb += 1
+        total_nuber_task_done += 1
         if task.get("completed") is True:
-            completed_nb += 1
+            number_of_task_done += 1
             completed_tasks.append(task.get("title"))
 
     sentence = "Employee {} is done with tasks({}/{}):"
-    print(sentence.format(user.get("name"), completed_nb, total_nb))
+    print(sentence.format(user.get("name"), number_of_task_done, total_nuber_task_done))
     for task in completed_tasks:
         print("\t {}".format(task))
